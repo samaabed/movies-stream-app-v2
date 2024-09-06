@@ -7,15 +7,15 @@
     border-right: 5px solid var(--lightBlack);
 }
 
+.profileImage{
+  height: 45px;
+  width: 45px;
+}
+
 .profileImage, .friendIcon {
     border-radius: 50%;
     background-image: url("../../../assets/images/user.png");
     background-size: contain;
-}
-
-.profileImage{
-    height: 45px;
-    width: 45px;
 }
 
 .friendIcon{
