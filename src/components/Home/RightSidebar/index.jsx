@@ -1,38 +1,21 @@
 import styles from "./index.module.css";
 import { useContext } from "react";
 import ThemeContext from "../../../contexts/ThemeContext";
+import ServicesItem from "./ServicesItem";
 
 
 const RightSidebar = () => {
   const { theme } = useContext(ThemeContext);
+  const services = ['apple tv', 'disney tv', 'hbo max tv', 'hulu', 'prime' ];
   return (
     <div className={styles.container}>
       <div className={styles.mediaServicesSction}>
         <h2 className={styles.sidebarTitle + ' ' + theme}>media services</h2>
-        <div className={styles.mediaRow}>
-          <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName + ' ' + theme}>apple tv</p>
-        </div>
-        <div className={styles.mediaRow}>
-          <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName + ' ' + theme}>disney tv</p>
-        </div>
-
-        <div className={styles.mediaRow}>
-          <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName + ' ' + theme}>hbo max tv</p>
-        </div>
-
-        <div className={styles.mediaRow}>
-          <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName + ' ' + theme}>hulu</p>
-        </div>
-
-        <div className={styles.mediaRow}>
-          <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName + ' ' + theme}>prime</p>
-        </div>
+        {
+          services.map(service => <ServicesItem serviceName={service}/> )
+        }
       </div>
+
       <div className={styles.genreSection}>
         <h2 className={styles.sidebarTitle + ' ' + theme}>genre</h2>
          <p className={styles.genreName + ' ' + theme}>action</p>
