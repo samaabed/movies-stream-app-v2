@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav>
+      <nav className={styles.nav}>
         <p className={styles.navTitle + ' ' + theme}>Discover your favorites.</p>
         <div className={styles.searchWrapper}>
           <div className={styles.searchBox}>
