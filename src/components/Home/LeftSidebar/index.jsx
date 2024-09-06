@@ -1,4 +1,4 @@
-import styles from "./LeftSidebar.module.css";
+import styles from "./index.module.css";
 import { useContext } from "react";
 import ThemeContext from "../../../contexts/ThemeContext";
 
