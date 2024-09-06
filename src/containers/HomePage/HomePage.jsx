@@ -1,10 +1,6 @@
-import MainContent from "../../components/Home/MainContent";
-import Navbar from "../../components/Home/Navbar";
-import LeftSidebar from "../../components/Home/LeftSidebar";
-import styles from "./HomePage.module.css";
-import RightSidebar from "../../components/Home/RightSidebar/RightSidebar";
 import { useState } from "react";
 import ThemeContext from "../../contexts/ThemeContext";
+import Navbar from "../../components/Home/Navbar"
 
 const Home = () => {
   const [theme, setTheme] = useState("dark");
@@ -15,7 +11,7 @@ const Home = () => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-
+          <Navbar />
     </ThemeContext.Provider>
   );
 };
